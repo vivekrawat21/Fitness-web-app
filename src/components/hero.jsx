@@ -1,7 +1,7 @@
 import React from "react";
 import {  Box, Typography, Button } from "@mui/material";
 import HeroBannerImage from "../assets/images/banner.png"
-function hero() {
+function Hero() {
   return (
     <>
       <Box
@@ -42,7 +42,7 @@ function hero() {
         fontWeight='600'
         color='#ff2625'
         sx={{
-            opacity: 0.1,
+            opacity: 0.12,
             display: {lg:'block',xs : 'none'}
         }}
         fontSize='200px'
@@ -55,4 +55,4 @@ function hero() {
   );
 }
 
-export default hero;
+export default Hero;

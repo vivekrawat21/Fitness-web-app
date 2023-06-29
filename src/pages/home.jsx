@@ -1,17 +1,19 @@
+
 import React from 'react';
 import { useState } from 'react';
 import { Box } from '@mui/material';
 import Hero from '../components/hero';
 import ExerciseSearch from '../components/exercisesearch'
 import Exercises from '../components/exercises';
-
-function home() {
+function Home() {
+  const [bodyPart, setBodyPart] = useState('')
+  const [exercises, setExercises] = useState([]);
   return (
     <>
 <Box>
 <Hero />
-<ExerciseSearch />
-<Exercises />
+<ExerciseSearch setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+<Exercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart} />
 
 
 </Box>
@@ -20,4 +22,4 @@ function home() {
   )
 }
 
-export default home
+export default Home

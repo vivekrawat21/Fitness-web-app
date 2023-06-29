@@ -81,11 +81,12 @@ body {
   .exercise-card img {
     height: 326px;
   }
-  
   .bodyPart-card {
     transform: scale(1, 1);
     transition: 0.3s all ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+ 
   
   .exercise-card:hover,
   .bodyPart-card:hover {
@@ -142,3 +143,5 @@ body {
       width: 280px;
     }
   }
+    
+  
