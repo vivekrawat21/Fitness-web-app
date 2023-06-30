@@ -22,7 +22,7 @@ function Hero() {
           }}
           mb="23px" mt="30px"
         >
-          Sweat , Smile <br /> and Repeat
+          Sweat , Smile <br/> and Repeat
         </Typography>
         <Typography fontSize="15px" lineHeight="35px" mb={4} color={"gray"}>
           Checkout the most effective Exercises

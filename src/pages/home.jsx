@@ -6,8 +6,10 @@ import Hero from '../components/hero';
 import ExerciseSearch from '../components/exercisesearch'
 import Exercises from '../components/exercises';
 function Home() {
-  const [bodyPart, setBodyPart] = useState('')
+
+  const [bodyPart, setBodyPart] = useState("")
   const [exercises, setExercises] = useState([]);
+  console.log(Array.isArray(exercises));
   return (
     <>
 <Box>

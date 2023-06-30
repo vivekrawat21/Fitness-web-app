@@ -37,4 +37,4 @@ function BodyPart({item ,setBodyPart ,bodyPart}) {
   )
 }
 
-export default BodyPart
+export default BodyPart;
