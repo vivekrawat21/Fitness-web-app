@@ -5,7 +5,7 @@ function ExercisesCard({exercise}) {
   return (
     
     <>
-<Link  className="exercise-card" to={`exercise/e/${exercise.id}`} >
+<Link  className="exercise-card" to={`exercisedetails/${exercise.id}`} >
 <img src={exercise.gifUrl} alt={exercise.name} loading='lazy'/>
 <Stack direction="row">
 <Button sx={{
@@ -35,4 +35,4 @@ function ExercisesCard({exercise}) {
   )
 }
 
-export default ExercisesCard
+export default ExercisesCard;

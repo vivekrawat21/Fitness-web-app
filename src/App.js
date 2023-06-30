@@ -4,7 +4,7 @@ import './App.css'
 import { Routes ,Route } from "react-router-dom";
 import Home from "./pages/home"
 import Navbar from "./components/navbar"
-import ExerciseDetails from "./pages/exercise"
+import ExerciseDetails from "./pages/exercisedetails"
 import Fotter from "./components/fotter"
 function App() {
   
@@ -15,7 +15,7 @@ function App() {
     <Routes>
     
     <Route path="/" element={<Home />}/>
-    <Route path="/exercise/:id" element= {<ExerciseDetails />}/>
+    <Route path="/exercisedetails/:id" element= {<ExerciseDetails />}/>
 
     </Routes>
     <Fotter />
