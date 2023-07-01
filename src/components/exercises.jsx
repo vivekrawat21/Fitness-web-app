@@ -12,7 +12,6 @@ function Exercises({ exercises, setExercises, bodyPart }) {
     IndexOfFirstExercise,
     IndexOfLastExercise
   );
- 
 
   const paginate = (e, value) => {
     setCurrentPage(value);
@@ -23,7 +22,7 @@ function Exercises({ exercises, setExercises, bodyPart }) {
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
-      if ( bodyPart === "" || bodyPart === "all") {
+      if (bodyPart === "" || bodyPart === "all") {
         exercisesData = await fetchData(
           "https://exercisedb.p.rapidapi.com/exercises",
           exerciseOptions
@@ -32,16 +31,12 @@ function Exercises({ exercises, setExercises, bodyPart }) {
         exercisesData = await fetchData(
           `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`,
           exerciseOptions
-        
         );
         setExercises(exercisesData);
-      
       }
-    
-     
     };
     fetchExercisesData();
-  },[bodyPart] );
+  }, [bodyPart]);
 
   // console.log(exercises);
   return (
