@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import BodyPart from "./bodypart";
@@ -5,6 +6,19 @@ import RightArrowIcon from "../assets/icons/right-arrow.png";
 import LeftArrowIcon from "../assets/icons/left-arrow.png";
 
 function HorizontalScrollBar({ data, bodyPart, setBodyPart }) {
+=======
+import React from 'react';
+import { Box ,Typography} from '@mui/material';
+import BodyPart from './bodypart';
+import RightArrowIcon from '../assets/icons/right-arrow.png';
+import LeftArrowIcon from '../assets/icons/left-arrow.png';
+import ExerciseCard from './exercisescard'
+
+
+
+
+function HorizontalScrollBar({data , bodyPart , setBodyPart, isBodyPart}) {
+>>>>>>> vivek
   return (
     <>
       <div
@@ -21,6 +35,7 @@ function HorizontalScrollBar({ data, bodyPart, setBodyPart }) {
             tittle={item.id || item}
             m="0 40px"
           >
+<<<<<<< HEAD
             <BodyPart
               item={item}
               bodyPart={bodyPart}
@@ -32,6 +47,20 @@ function HorizontalScrollBar({ data, bodyPart, setBodyPart }) {
           <img src={RightArrowIcon} alt="right-arrow" />
         </Typography>
       </div>
+=======
+       {isBodyPart  ? <BodyPart item ={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+       : <ExerciseCard exercise={item}/>}
+       
+        </Box>)
+        )
+        }
+        <Typography  className="left-arrow">
+      <img src={RightArrowIcon} alt="right-arrow" />
+    </Typography>
+        
+        </div>
+       
+>>>>>>> vivek
     </>
   );
 }

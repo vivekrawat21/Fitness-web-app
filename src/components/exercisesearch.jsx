@@ -10,10 +10,18 @@ function Exercisesearch({ setExercises, bodyPart, setBodyPart }) {
 
   useEffect(() => {
     const fetchExerciseData = async () => {
+<<<<<<< HEAD
       const bodyPartData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
       );
+=======
+     
+      const bodyPartData = await fetchData("https://exercisedb.p.rapidapi.com/exercises/bodyPartList",exerciseOptions);
+      console.log(bodyPartData);
+
+
+>>>>>>> vivek
       setBodyParts([...bodyPartData]);
     };
     fetchExerciseData();
@@ -105,6 +113,7 @@ function Exercisesearch({ setExercises, bodyPart, setBodyPart }) {
             data={bodyParts}
             bodyPart={bodyPart}
             setBodyPart={setBodyPart}
+            isBodyPart={true}
           />
         </Box>
       </Stack>
