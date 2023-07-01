@@ -3,11 +3,12 @@ import { Box ,Typography} from '@mui/material';
 import BodyPart from './bodypart';
 import RightArrowIcon from '../assets/icons/right-arrow.png';
 import LeftArrowIcon from '../assets/icons/left-arrow.png';
+import ExerciseCard from './exercisescard'
 
 
 
 
-function HorizontalScrollBar({data , bodyPart , setBodyPart}) {
+function HorizontalScrollBar({data , bodyPart , setBodyPart, isBodyPart}) {
   return (
     <>
       <div style={{display:'flex', overflowY: 'scroll', whiteSpace: 'nowrap' }}>
@@ -23,7 +24,8 @@ function HorizontalScrollBar({data , bodyPart , setBodyPart}) {
           tittle ={item.id ||item}
           m = "0 40px"
           >
-          <BodyPart item ={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+       {isBodyPart  ? <BodyPart item ={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+       : <ExerciseCard exercise={item}/>}
        
         </Box>)
         )

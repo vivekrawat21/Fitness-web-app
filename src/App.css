@@ -1,6 +1,6 @@
 body {
     font-family: 'Josefin Sans';
-    background-color: #FFFAFB;
+    background-color: #FFFAFB;;
   }
   
   * {
@@ -91,6 +91,7 @@ body {
   .exercise-card:hover,
   .bodyPart-card:hover {
     transform: scale(1.1, 1.1);
+    
   }
   
   .search-btn:hover {
