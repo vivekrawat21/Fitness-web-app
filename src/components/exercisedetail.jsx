@@ -3,7 +3,7 @@ import { Typography, Button, Stack } from "@mui/material";
 import BodyPartImage from "../assets/icons/body-part.png";
 import TargetImage from "../assets/icons/target.png";
 import EquipmentImage from "../assets/icons/equipment.png";
-import BodyPart from "./bodypart";
+
 
 function ExerciseDetails({ exerciseDetail }) {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
