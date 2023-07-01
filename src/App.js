@@ -5,7 +5,7 @@ import { Routes ,Route } from "react-router-dom";
 import Home from "./pages/home"
 import Navbar from "./components/navbar"
 import ExerciseDetails from "./pages/exercisedetails"
-import Fotter from "./components/fotter"
+import Fotter from "./components/footer"
 function App() {
   
   return (

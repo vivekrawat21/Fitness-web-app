@@ -2,7 +2,7 @@ import React from 'react'
 import {Box, Stack, Typography} from '@mui/material'
 import Logo from '../assets/images/Logo-1.png'
 
-function footer() {
+function Fotter() {
   return (
     <Box mt="80px" bgcolor="#fff3f4">
     <Stack gap="40px" alignItems="center" px="40px" pt="24px">
@@ -17,8 +17,4 @@ function footer() {
   )
 }
 
-<<<<<<< HEAD:src/components/footer.jsx
-export default footer
-=======
 export default Fotter;
->>>>>>> vivek:src/components/fotter.jsx
