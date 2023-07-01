@@ -1,6 +1,6 @@
 import React from "react";
-import {  Box, Typography, Button } from "@mui/material";
-import HeroBannerImage from "../assets/images/banner.png"
+import { Box, Typography, Button } from "@mui/material";
+import HeroBannerImage from "../assets/images/banner.png";
 function Hero() {
   return (
     <>
@@ -20,9 +20,10 @@ function Hero() {
           sx={{
             fontSize: { lg: "44px", xs: "40px" },
           }}
-          mb="23px" mt="30px"
+          mb="23px"
+          mt="30px"
         >
-          Sweat , Smile <br/> and Repeat
+          Sweat , Smile <br /> and Repeat
         </Typography>
         <Typography fontSize="15px" lineHeight="35px" mb={4} color={"gray"}>
           Checkout the most effective Exercises
@@ -31,25 +32,24 @@ function Hero() {
           variant="contained"
           href="#exercises"
           sx={{
-         backgroundColor: '#ff2625',
-         padding:'10px'
+            backgroundColor: "#ff2625",
+            padding: "10px",
           }}
-          
         >
           Explore Exercises
         </Button>
         <Typography
-        fontWeight='600'
-        color='#ff2625'
-        sx={{
+          fontWeight="600"
+          color="#ff2625"
+          sx={{
             opacity: 0.12,
-            display: {lg:'block',xs : 'none'}
-        }}
-        fontSize='200px'
+            display: { lg: "block", xs: "none" },
+          }}
+          fontSize="200px"
         >
-            Exercises
+          Exercises
         </Typography>
-        <img src={HeroBannerImage} alt="Banner" className="hero-banner-img"/>
+        <img src={HeroBannerImage} alt="Banner" className="hero-banner-img" />
       </Box>
     </>
   );
