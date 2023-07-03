@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 import Logo from "../assets/images/Logo.png";
-function navbar() {
+const navbar = () => {
   return (
     <>
       <Stack
@@ -49,6 +49,6 @@ function navbar() {
       </Stack>
     </>
   );
-}
+};
 
 export default navbar;

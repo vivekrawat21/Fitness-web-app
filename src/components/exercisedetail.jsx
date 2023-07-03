@@ -4,8 +4,7 @@ import BodyPartImage from "../assets/icons/body-part.png";
 import TargetImage from "../assets/icons/target.png";
 import EquipmentImage from "../assets/icons/equipment.png";
 
-
-function ExerciseDetails({ exerciseDetail }) {
+const ExerciseDetails = ({ exerciseDetail }) => {
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
   const extraDetail = [
     {
@@ -82,6 +81,6 @@ function ExerciseDetails({ exerciseDetail }) {
       </Stack>
     </>
   );
-}
+};
 
 export default ExerciseDetails;
