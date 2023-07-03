@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 import Logo from "../assets/images/Logo.png";
-const navbar = () => {
+import { ThemeContext } from "../Context/Theme"; 
+
+const Navbar = () => {
+  // const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
     <>
       <Stack
         direction="row"
         justifyContent="space-around"
+
         sx={{
           gap: { sm: "122px", xs: "40px" },
           mt: { sm: "32px", xs: "20px" },
           justifyContent: "none",
+          // backgroundColor: theme.background,
+          // color: theme.color,
         }}
         px="20px"
       >
@@ -36,7 +43,6 @@ const navbar = () => {
               borderBottom: "3px solid #FF2625",
             }}
           >
-            {" "}
             Home
           </Link>
           <a
@@ -45,10 +51,11 @@ const navbar = () => {
           >
             Exercises
           </a>
+          {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
         </Stack>
       </Stack>
     </>
   );
 };
 
-export default navbar;
+export default Navbar;
