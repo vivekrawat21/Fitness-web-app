@@ -1,9 +1,9 @@
 import React from 'react'
 
-function ExerciseVideos() {
+const exercisevideos = () => {
   return (
-    <div>ExerciseVideos</div>
+    <div>exercisevideos</div>
   )
 }
 
-export default ExerciseVideos;
+export default exercisevideos

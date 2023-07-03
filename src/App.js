@@ -6,7 +6,7 @@ import Home from "./pages/home";
 import Navbar from "./components/navbar";
 import ExerciseDetails from "./pages/exercisedetails";
 import Footer from "./components/footer";
-function App() {
+const App = () => {
   return (
     <>
       <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
@@ -19,6 +19,6 @@ function App() {
       </Box>
     </>
   );
-}
+};
 
 export default App;

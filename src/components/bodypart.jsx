@@ -1,7 +1,8 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
 import Icon from "../assets/icons/gym.png";
-function BodyPart({ item, setBodyPart, bodyPart }) {
+
+const bodypart = ({ item, setBodyPart, bodyPart }) => {
   return (
     <>
       <Stack
@@ -45,4 +46,4 @@ function BodyPart({ item, setBodyPart, bodyPart }) {
   );
 }
 
-export default BodyPart;
+export default bodypart

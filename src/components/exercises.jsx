@@ -3,7 +3,8 @@ import { Pagination } from "@mui/material";
 import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExercisesCard from "./exercisescard";
-function Exercises({ exercises, setExercises, bodyPart }) {
+
+const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const ExercisePerPage = 9;
   const IndexOfLastExercise = currentPage * ExercisePerPage;
@@ -72,6 +73,6 @@ function Exercises({ exercises, setExercises, bodyPart }) {
       </Box>
     </>
   );
-}
+};
 
 export default Exercises;

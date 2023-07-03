@@ -4,7 +4,7 @@ import BodyPart from "./bodypart";
 import RightArrowIcon from "../assets/icons/right-arrow.png";
 import LeftArrowIcon from "../assets/icons/left-arrow.png";
 
-function HorizontalScrollBar({ data, bodyPart, setBodyPart }) {
+const HorizontalScrollBar = ({ data, bodyPart, setBodyPart }) => {
   return (
     <>
       <div
@@ -34,6 +34,6 @@ function HorizontalScrollBar({ data, bodyPart, setBodyPart }) {
       </div>
     </>
   );
-}
+};
 
 export default HorizontalScrollBar;

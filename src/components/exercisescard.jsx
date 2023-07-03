@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
-function ExercisesCard({ exercise }) {
+
+const ExercisesCard = ({ exercise }) => {
   return (
     <>
       <Link className="exercise-card" to={`exercisedetails/${exercise.id}`}>
@@ -48,6 +49,6 @@ function ExercisesCard({ exercise }) {
       </Link>
     </>
   );
-}
+};
 
 export default ExercisesCard;
