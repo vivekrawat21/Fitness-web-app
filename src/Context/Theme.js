@@ -5,6 +5,8 @@ const ThemeContext = createContext();
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(LightTheme);
 
+  //   Rough Colors
+
   const LightTheme = {
     background: "#fff",
     color: "#000",
