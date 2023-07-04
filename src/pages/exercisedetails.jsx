@@ -49,6 +49,7 @@ const ExerciseDetails = () => {
 
     fetchExercisesData();
   }, [id]);
+  
   // console.log(equipmentExercises);
 
   return (
