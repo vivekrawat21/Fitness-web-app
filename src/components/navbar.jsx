@@ -23,6 +23,7 @@ const Navbar = () => {
     event.preventDefault();
     const exercisesSection = document.getElementById('exercises');
     exercisesSection.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo(0, 900);
   };
 
   const Pages = [
@@ -42,7 +43,9 @@ const drawerPages = ['Home' , 'Exercises' ,'blogs']
         }}
       >
         <Toolbar>
-          <Link to="/">
+          <Link to="/" onClick={()=>{
+            window.scrollTo(0,0)
+          }}>
             <img
               src={Logo}
               alt="Logo"
