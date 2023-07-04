@@ -2,20 +2,24 @@ import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import HorizontalScrollBar from "./horozontalscrollbar";
 import Loader from "./loader";
+import { useContext } from "react";
+import { ThemeContext } from "../Context/Theme"; 
 
 const SimilarExercises = ({ equipmentExercises, targetMuscleExercises }) => {
+  const { theme } = useContext(ThemeContext);
   return (
+
     <>
       <Box
         sx={{
           mt: { lg: "100px", xs: "0px" },
         }}
       >
-        <Typography variant="h4" mb="40px" fontWeight="600">
+        <Typography variant="h4" mb="40px" fontWeight="600" color={theme.color}>
           Exercises that target the{" "}
           <span
             style={{
-              color: "#ff2625",
+              color: "#6339f5",
               textTransform: "capitalize",
             }}
           >
@@ -45,11 +49,11 @@ const SimilarExercises = ({ equipmentExercises, targetMuscleExercises }) => {
           <hr />
         </div>
 
-        <Typography variant="h4" mb="40px" mt="70px" fontWeight="600">
+        <Typography variant="h4" mb="40px" mt="70px" fontWeight="600" color={theme.color}>
           Exercises that uses the{" "}
           <span
             style={{
-              color: "#ff2625",
+              color:"#6339f5",
               textTransform: "capitalize",
             }}
           >

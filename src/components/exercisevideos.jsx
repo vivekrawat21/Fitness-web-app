@@ -1,8 +1,10 @@
 import React from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../Context/Theme"; 
 import { Typography, Box, Stack } from "@mui/material";
-
 const ExerciseVideos = ({ exerciseVideos, name }) => {
-  console.log(exerciseVideos);
+  const { theme } = useContext(ThemeContext);
+  // console.log(exerciseVideos);
   if (!exerciseVideos.length) return "loading....";
   return (
     <>
@@ -12,11 +14,11 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         }}
         padding="20px"
       >
-        <Typography variant="h4" mb="40px" fontWeight="600">
+        <Typography variant="h4" mb="40px" fontWeight="600" color={theme.color}>
           Watch{" "}
           <span
             style={{
-              color: "#ff2625",
+              color: "#6339f5",
               textTransform: "capitalize",
             }}
           >
@@ -44,11 +46,11 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
               <img src={item.video.thumbnails[0].url} alt={item.video.title} />
 
               <Box>
-                <Typography variant="h7" fontWeight="500" color="#000">
+                <Typography variant="h7" fontWeight="500" color={theme.color}>
                   {item.video.title}
                 </Typography>
                 <br />
-                <Typography variant="h6" fontWeight="800" color="#000">
+                <Typography variant="h6" fontWeight="800" color={theme.color} >
                   {item.video.channelName}
                 </Typography>
               </Box>

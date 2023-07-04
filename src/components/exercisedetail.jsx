@@ -3,8 +3,11 @@ import { Typography, Button, Stack } from "@mui/material";
 import BodyPartImage from "../assets/icons/body-part.png";
 import TargetImage from "../assets/icons/target.png";
 import EquipmentImage from "../assets/icons/equipment.png";
+import { useContext } from "react";
+import { ThemeContext } from "../Context/Theme"; 
 
 const ExerciseDetails = ({ exerciseDetail }) => {
+  const { theme } = useContext(ThemeContext);
   const { bodyPart, gifUrl, name, target, equipment } = exerciseDetail;
   const extraDetail = [
     {
@@ -37,12 +40,15 @@ const ExerciseDetails = ({ exerciseDetail }) => {
             gap: { lg: "35px", xs: "20px" },
           }}
         >
-          <Typography variant="h3" textTransform="capitalize">
+          <Typography variant="h3" textTransform="capitalize" color={theme.color}>
             {name}
           </Typography>
-          <Typography variant="h6" textTransform="capitalize">
-            Exercises Keep you strong . {name} is one of the best exercises to
-            target on your {target} .It willhelp you improve your mood and gain
+          <Typography variant="h6" textTransform="capitalize" color={theme.color}>
+            Exercises Keep you strong . <span sx={{textTransform: "capitalize"}}> {" "}{name} </span>
+            is one of the best exercises to
+            target on your
+             <span sx={{textTransform: "capitalize"}} >{" "}{target}</span> 
+             .It willhelp you improve your mood and gain
             energy.
           </Typography>
           {extraDetail.map((item) => {
@@ -71,6 +77,7 @@ const ExerciseDetails = ({ exerciseDetail }) => {
                   variant="h6"
                   fontWeight="550"
                   textTransform="capitalize"
+                  color={theme.color}
                 >
                   {item.name}
                 </Typography>

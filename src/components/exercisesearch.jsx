@@ -1,10 +1,12 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect , useContext} from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import HorizontalScrollBar from "../components/horozontalscrollbar";
+import { ThemeContext } from "../Context/Theme"; 
 
 const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
+  const { theme } = useContext(ThemeContext);
   const [search, setSearch] = useState("");
 
   const [bodyParts, setBodyParts] = useState([]);
@@ -57,6 +59,7 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
           fontWeight={700}
           sx={{
             fontSize: { lg: "44px", xs: "30px" },
+            color: theme.color
           }}
           mb="50px"
           textAlign="center"
@@ -83,7 +86,7 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
           <Button
             className="search-btn"
             sx={{
-              bgcolor: "#ff2625",
+              bgcolor: "#6339f5",
               color: "#fff",
               textTransform: "none",
               width: { lg: "175px", xs: "180px" },

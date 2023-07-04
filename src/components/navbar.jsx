@@ -5,7 +5,7 @@ import Logo from "../assets/images/Logo.png";
 import { ThemeContext } from "../Context/Theme"; 
 
 const Navbar = () => {
-  // const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <>
@@ -17,8 +17,8 @@ const Navbar = () => {
           gap: { sm: "122px", xs: "40px" },
           mt: { sm: "32px", xs: "20px" },
           justifyContent: "none",
-          // backgroundColor: theme.background,
-          // color: theme.color,
+          backgroundColor: theme.background,
+          color: theme.color,
         }}
         px="20px"
       >
@@ -29,7 +29,7 @@ const Navbar = () => {
             style={{
               width: "48px",
               height: "48px",
-              margin: "0 20px",
+              margin: "0 20px"
             }}
           />
         </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
             to="/"
             style={{
               textDecoration: "none",
-              color: "3A1212",
+              color: theme.color,
               borderBottom: "3px solid #FF2625",
             }}
           >
@@ -47,11 +47,11 @@ const Navbar = () => {
           </Link>
           <a
             href="#exercises"
-            style={{ textDecoration: "none", color: "#3A1212" }}
+            style={{ textDecoration: "none", color: theme.color }}
           >
             Exercises
           </a>
-          {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
+          <button onClick={toggleTheme}>Toggle Theme</button>
         </Stack>
       </Stack>
     </>
