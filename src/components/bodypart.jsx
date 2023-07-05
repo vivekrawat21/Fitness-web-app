@@ -24,6 +24,7 @@ const BodyPart=({ item, setBodyPart, bodyPart }) =>{
           window.scrollTo({ top: 1750, left: 100, behavior: "smooth" });
         }}
       >
+        {/* helloo */}
         <img
           src={Icon}
           alt="dumble"
