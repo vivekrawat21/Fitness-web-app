@@ -44,7 +44,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   return (
     <>
       <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
-        <Typography variant="h3" mb="46px" fontWeight="600" color={theme.color}>
+        <Typography variant="h3" mb="46px" fontWeight="600" color={theme.color}sx={{'&:hover': {color: "#6339f5"}}}>
           Showing Results
         </Typography>
         <Stack

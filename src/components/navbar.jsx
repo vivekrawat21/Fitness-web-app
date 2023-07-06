@@ -102,7 +102,7 @@ const Navbar = () => {
           >
             {theme.icon}
           </Button>
-
+          <a href="https://github.com/vivekrawat21/Fitness-web-app">
           <Button
             sx={{
               backgroundColor: "inherit",
@@ -112,8 +112,9 @@ const Navbar = () => {
               marginLeft: "5px",
             }}
           >
-            <GitHubIcon />
+          <GitHubIcon />
           </Button>
+          </a> 
 
           <Drawer />
         </Toolbar>

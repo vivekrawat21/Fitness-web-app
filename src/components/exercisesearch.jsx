@@ -55,12 +55,13 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
 
   return (
     <>
-      <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
+      <Stack alignItems="center" mt="200px" justifyContent="center" p="20px">
         <Typography
           fontWeight={700}
           sx={{
             fontSize: { lg: "44px", xs: "30px" },
             color: theme.color,
+            '&:hover': {color: "#6339f5"}
           }}
           mb="50px"
           textAlign="center"
@@ -81,13 +82,13 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
           Awesome Exercises You <br />
           Should Know
         </Typography>
-        <Box position="relative" mb="72px">
+        <Box position="relative" mb="78px" mt="50px">
           <TextField
             sx={{
               input: { fontWeight: "700", border: "none", borderRadius: "4px" },
               width: { lg: "1000px", xs: "350px" },
               backgroundColor: "#ffff",
-              borderRadius: "40px",
+              borderRadius: "10px",
             }}
             height="76px"
             value={search}
@@ -119,6 +120,7 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
             position: "relative",
             width: "100%",
             p: "20px",
+            mb:"60px"
           }}
         >
           <HorizontalScrollBar
