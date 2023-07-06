@@ -31,12 +31,13 @@ const Navbar = () => {
     { label: "Exercises", path: "/exercises" },
     { label: "Blogs", path: "/blogs" },
   ];
-  const drawerPages = ["Home", "Exercises", "blogs"];
   return (
     <>
       <AppBar
         sx={{
-          backgroundColor:"#855ff2",
+          backgroundColor: theme.background,
+          borderBottom: "1px solid white",
+          boxShadow: 4,
           opacity: "0.9",
           position: "sticky",
           top: 0,
@@ -61,9 +62,9 @@ const Navbar = () => {
           </Link>
 
           <Tabs
-            textColor="white"
+            textColor={theme.color}
             TabIndicatorProps={{
-              style: { background: "white", height: "3.5px" },
+              style: { background: "#855ff2", height: "3.5px" },
             }}
             value={value}
             onChange={handleTabChange}
@@ -114,7 +115,7 @@ const Navbar = () => {
             <GitHubIcon />
           </Button>
 
-          <Drawer Pages={drawerPages} />
+          <Drawer />
         </Toolbar>
       </AppBar>
     </>

@@ -1,9 +1,9 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Pagination } from "@mui/material";
 import { Box, Stack, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import ExercisesCard from "./exercisescard";
-import { ThemeContext } from "../Context/Theme"; 
+import { ThemeContext } from "../Context/Theme";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -62,13 +62,12 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
         <Stack mt="100px" alignItems="center">
           {exercises.length > 9 && (
             <Pagination
-             sx={{
-        '& .Mui-selected': {
-          backgroundColor: "#6339f5", // Set the dynamic background color for the selected item
-          color: `white`, 
-          },
-        }
-      }
+              sx={{
+                "& .Mui-selected": {
+                  backgroundColor: "#6339f5", // Set the dynamic background color for the selected item
+                  color: `white`,
+                },
+              }}
               shape="rounded"
               count={Math.round(exercises.length / ExercisePerPage)}
               page={currentPage}
