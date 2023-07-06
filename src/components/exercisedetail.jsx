@@ -40,7 +40,7 @@ const ExerciseDetails = ({ exerciseDetail }) => {
             gap: { lg: "35px", xs: "20px" },
           }}
         >
-          <Typography variant="h3" textTransform="capitalize" color={theme.color}>
+          <Typography variant="h3" textTransform="capitalize" color=" #6339f5" fontWeight="bold">
             {name}
           </Typography>
           <Typography variant="h6" textTransform="capitalize" color={theme.color}>
@@ -61,7 +61,7 @@ const ExerciseDetails = ({ exerciseDetail }) => {
               >
                 <Button
                   sx={{
-                    background: "yellow",
+                    background: "",
                     borderRadius: "50%",
                     width: "80px",
                     height: "80px",

@@ -36,7 +36,7 @@ const Navbar = () => {
     <>
       <AppBar
         sx={{
-          backgroundColor: theme.color,
+          backgroundColor:"#855ff2",
           opacity: "0.9",
           position: "sticky",
           top: 0,
@@ -63,7 +63,7 @@ const Navbar = () => {
           <Tabs
             textColor="white"
             TabIndicatorProps={{
-              style: { background: "#6339f5", height: "3.5px" },
+              style: { background: "white", height: "3.5px" },
             }}
             value={value}
             onChange={handleTabChange}
@@ -81,7 +81,7 @@ const Navbar = () => {
                   fontWeight: "900",
                   fontSize: "17px",
                   margin: "0px 15px",
-                  color: theme.background,
+                  color: theme.color,
                 }}
                 component={Link}
                 to={page.path}
@@ -94,7 +94,7 @@ const Navbar = () => {
           <Button
             onClick={toggleTheme}
             sx={{
-              color: theme.background,
+              color: theme.color,
               borderRadius: "100px",
               marginLeft: "auto",
             }}
@@ -105,7 +105,7 @@ const Navbar = () => {
           <Button
             sx={{
               backgroundColor: "inherit",
-              color: theme.background,
+              color: theme.color,
               width: "5px",
               borderRadius: "100px",
               marginLeft: "5px",
