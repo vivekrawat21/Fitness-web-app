@@ -1,9 +1,10 @@
 import React from "react";
-import { useState, useEffect , useContext} from "react";
+import { useState, useEffect, useContext } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData";
 import HorizontalScrollBar from "../components/horozontalscrollbar";
-import { ThemeContext } from "../Context/Theme"; 
+import { ThemeContext } from "../Context/Theme";
+import { motion } from "framer-motion";
 
 const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
   const { theme } = useContext(ThemeContext);
@@ -59,10 +60,23 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
           fontWeight={700}
           sx={{
             fontSize: { lg: "44px", xs: "30px" },
-            color: theme.color
+            color: theme.color,
           }}
           mb="50px"
           textAlign="center"
+          component={motion.div}
+          initial={{
+            opacity: 0,
+            y: -100,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.6,
+            delay: 0.7,
+          }}
         >
           Awesome Exercises You <br />
           Should Know
