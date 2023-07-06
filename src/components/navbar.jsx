@@ -102,19 +102,19 @@ const Navbar = () => {
           >
             {theme.icon}
           </Button>
-          <a href="https://github.com/vivekrawat21/Fitness-web-app">
-          <Button
-            sx={{
-              backgroundColor: "inherit",
-              color: theme.color,
-              width: "5px",
-              borderRadius: "100px",
-              marginLeft: "5px",
-            }}
-          >
-          <GitHubIcon />
-          </Button>
-          </a> 
+          <a href="https://github.com/vivekrawat21/Fitness-web-app" target="#">
+            <Button
+              sx={{
+                backgroundColor: "inherit",
+                color: theme.color,
+                width: "5px",
+                borderRadius: "100px",
+                marginLeft: "5px",
+              }}
+            >
+              <GitHubIcon />
+            </Button>
+          </a>
 
           <Drawer />
         </Toolbar>
