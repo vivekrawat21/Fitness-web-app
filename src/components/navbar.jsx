@@ -31,12 +31,13 @@ const Navbar = () => {
     { label: "Exercises", path: "/exercises" },
     { label: "Blogs", path: "/blogs" },
   ];
-  const drawerPages = ["Home", "Exercises", "blogs"];
   return (
     <>
       <AppBar
         sx={{
-          backgroundColor: theme.color,
+          backgroundColor: theme.background,
+          borderBottom: "1px solid white",
+          boxShadow: 4,
           opacity: "0.9",
           position: "sticky",
           top: 0,
@@ -61,9 +62,9 @@ const Navbar = () => {
           </Link>
 
           <Tabs
-            textColor="white"
+            textColor={theme.color}
             TabIndicatorProps={{
-              style: { background: "#6339f5", height: "3.5px" },
+              style: { background: "#855ff2", height: "3.5px" },
             }}
             value={value}
             onChange={handleTabChange}
@@ -81,7 +82,7 @@ const Navbar = () => {
                   fontWeight: "900",
                   fontSize: "17px",
                   margin: "0px 15px",
-                  color: theme.background,
+                  color: theme.color,
                 }}
                 component={Link}
                 to={page.path}
@@ -94,27 +95,28 @@ const Navbar = () => {
           <Button
             onClick={toggleTheme}
             sx={{
-              color: theme.background,
+              color: theme.color,
               borderRadius: "100px",
               marginLeft: "auto",
             }}
           >
             {theme.icon}
           </Button>
+          <a href="https://github.com/vivekrawat21/Fitness-web-app" target="#">
+            <Button
+              sx={{
+                backgroundColor: "inherit",
+                color: theme.color,
+                width: "5px",
+                borderRadius: "100px",
+                marginLeft: "5px",
+              }}
+            >
+              <GitHubIcon />
+            </Button>
+          </a>
 
-          <Button
-            sx={{
-              backgroundColor: "inherit",
-              color: theme.background,
-              width: "5px",
-              borderRadius: "100px",
-              marginLeft: "5px",
-            }}
-          >
-            <GitHubIcon />
-          </Button>
-
-          <Drawer Pages={drawerPages} />
+          <Drawer />
         </Toolbar>
       </AppBar>
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { ThemeContext } from "../Context/Theme"; 
+import { ThemeContext } from "../Context/Theme";
 import { Typography, Box, Stack } from "@mui/material";
 const ExerciseVideos = ({ exerciseVideos, name }) => {
   const { theme } = useContext(ThemeContext);
@@ -50,7 +50,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
                   {item.video.title}
                 </Typography>
                 <br />
-                <Typography variant="h6" fontWeight="800" color={theme.color} >
+                <Typography variant="h6" fontWeight="800" color={theme.color}>
                   {item.video.channelName}
                 </Typography>
               </Box>
