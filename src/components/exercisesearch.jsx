@@ -55,7 +55,7 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
 
   return (
     <>
-      <Stack alignItems="center" mt="200px" justifyContent="center" p="20px">
+      <Stack alignItems="center" mt="100px" justifyContent="center" p="20px">
         <Typography
           fontWeight={700}
           sx={{

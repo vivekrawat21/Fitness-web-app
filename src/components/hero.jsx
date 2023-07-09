@@ -28,11 +28,11 @@ const Hero = () => {
             y: 0,
           }}
           transition={{
-            duration: 0.5,
-            delay: 0.5,
+            duration: 0.7,
+            delay: 0.7,
           }}
         >
-          <Typography color="#6339f5" fontWeight="600" fontSize="26px">
+          <Typography color="#6339f5" fontWeight="600" fontSize="26px" className="fitness-club">
             Fitness club
           </Typography>
           <Typography
@@ -43,6 +43,7 @@ const Hero = () => {
             }}
             mb="23px"
             mt="30px"
+            className="Moto"
           >
             Sweat , Smile <br /> and Repeat
           </Typography>
@@ -67,17 +68,44 @@ const Hero = () => {
           </Button>
         </Typography>
         <Typography
+        component={motion.div}
+          initial={{
+            opacity: 0,
+            x: -100,
+          }}
+          animate={{
+            opacity: 0.2,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.6,
+            delay: 0.6,
+          }}
           fontWeight="600"
           color="#6339f5"
           sx={{
-            opacity: 0.12,
+            marginLeft:"10px",
+            marginTop:"100px",
             display: { lg: "block", xs: "none" },
           }}
           fontSize="200px"
+          className="Exercises"
         >
           Exercises
         </Typography>
-        <img src={HeroBannerImage} alt="Banner" className="hero-banner-img" />
+        <motion.img src={HeroBannerImage} alt="Banner" className="hero-banner-img" 
+        initial={{
+            opacity: 0,
+            x: 140,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.4,
+            delay: 0.4,
+          }} />
       </Box>
     </>
   );
