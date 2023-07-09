@@ -85,10 +85,10 @@ const Hero = () => {
           color="#6339f5"
           sx={{
             marginLeft:"10px",
-            marginTop:"100px",
+            marginTop:"75px",
             display: { lg: "block", xs: "none" },
           }}
-          fontSize="200px"
+          fontSize="180px"
           className="Exercises"
         >
           Exercises
