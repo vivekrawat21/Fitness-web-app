@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack,Box } from '@mui/material';
+import { Stack } from '@mui/material';
 import Card from '../components/card';
 
  const blogs = () => {
