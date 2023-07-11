@@ -38,8 +38,6 @@ The fitness website is built using the following technologies:
 
 - **React**: A JavaScript library for building user interfaces.
 - **Node.js**: A JavaScript runtime environment.
-- **Express**: A web application framework for Node.js used for server-side routing and API handling.
-- **MongoDB**: A NoSQL database for storing user information, workout plans, and other data.
 
 ## Contributing
 

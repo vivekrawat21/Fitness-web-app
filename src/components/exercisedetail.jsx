@@ -34,13 +34,13 @@ const ExerciseDetails = ({ exerciseDetail }) => {
           alignItems: "center",
         }}
       >
-        <img src={gifUrl} alt={name} loading="lazy" className="detail-image" />
+        <img src={gifUrl} alt={name} loading="lazy" style={{border:"4px solid white "}} className="detail-image" />
         <Stack
           sx={{
             gap: { lg: "35px", xs: "20px" },
           }}
         >
-          <Typography variant="h3" textTransform="capitalize" color={theme.color}>
+          <Typography variant="h3" textTransform="capitalize" color=" #6339f5" fontWeight="bold">
             {name}
           </Typography>
           <Typography variant="h6" textTransform="capitalize" color={theme.color}>
@@ -61,7 +61,7 @@ const ExerciseDetails = ({ exerciseDetail }) => {
               >
                 <Button
                   sx={{
-                    background: "yellow",
+                    background: "",
                     borderRadius: "50%",
                     width: "80px",
                     height: "80px",
@@ -70,7 +70,7 @@ const ExerciseDetails = ({ exerciseDetail }) => {
                   <img
                     src={item.icon}
                     alt={bodyPart}
-                    style={{ width: "40px", height: "40px" }}
+                    style={{ width: "40px", height: "40px"} }
                   />
                 </Button>
                 <Typography
@@ -78,6 +78,7 @@ const ExerciseDetails = ({ exerciseDetail }) => {
                   fontWeight="550"
                   textTransform="capitalize"
                   color={theme.color}
+                  sx ={{'&:hover': {color: "#6339f5"}}}
                 >
                   {item.name}
                 </Typography>

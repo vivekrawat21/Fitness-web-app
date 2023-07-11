@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { ThemeContext } from "../Context/Theme"; 
+import { ThemeContext } from "../Context/Theme";
 import { Typography, Box, Stack } from "@mui/material";
 const ExerciseVideos = ({ exerciseVideos, name }) => {
   const { theme } = useContext(ThemeContext);
@@ -33,8 +33,10 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
           sx={{
             flexDirection: { lg: "row" },
             gap: { lg: "110px", xs: "0" },
+           
+            
           }}
-        >
+                >
           {exerciseVideos?.slice(0, 3).map((item, index) => (
             <a
               key={index}
@@ -42,7 +44,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
               href={`https:www.youtube.com/watch?v=${item.video.videoId}`}
               target="_blank"
               rel="noreferrer"
-            >
+              style={{ border:  "2px solid white", padding:"10px" }} >
               <img src={item.video.thumbnails[0].url} alt={item.video.title} />
 
               <Box>
@@ -50,7 +52,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
                   {item.video.title}
                 </Typography>
                 <br />
-                <Typography variant="h6" fontWeight="800" color={theme.color} >
+                <Typography variant="h6" fontWeight="800" color={theme.color}>
                   {item.video.channelName}
                 </Typography>
               </Box>
