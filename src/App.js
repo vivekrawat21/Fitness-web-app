@@ -9,6 +9,7 @@ import Blogs from "./pages/blogs";
 import Footer from "./components/footer";
 import { useContext } from "react";
 import { ThemeContext } from "./Context/Theme";
+import PageNotFound from "./components/PageNotFound";
 function App() {
   const { theme } = useContext(ThemeContext);
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/exercisedetails/:id" element={<ExerciseDetails />} />
             <Route path="/blogs" element={<Blogs />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Box>
         <Footer />
