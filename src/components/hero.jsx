@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
-import HeroBannerImage from "../assets/images/banner.png";
+import HeroBannerImage from "../assets/images/banner.jpg";
 import { useContext } from "react";
 import { ThemeContext } from "../Context/Theme";
 import { motion } from "framer-motion";
