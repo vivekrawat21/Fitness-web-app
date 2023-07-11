@@ -21,6 +21,7 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
       console.log(bodyPartData);
 
       setBodyParts([...bodyPartData]);
+      // checking for update
     };
     fetchExerciseData();
   }, []);
