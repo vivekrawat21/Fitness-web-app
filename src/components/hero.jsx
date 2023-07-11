@@ -110,5 +110,5 @@ const Hero = () => {
     </>
   );
 };
-
+// comment added
 export default Hero;
