@@ -3,7 +3,7 @@ import { Box, Stack, Button } from '@mui/material';
 import jsonData from '../DB/BlogsDb.json';
 import { useContext } from "react";
 import { ThemeContext } from "../Context/Theme"; 
-import { color } from 'framer-motion';
+import LaunchIcon from '@mui/icons-material/Launch';
 
 
 const Card = () => {
@@ -33,7 +33,7 @@ const Card = () => {
               Author: <span style={{ color: 'red', fontFamily: 'monospace' }}>{data.authorName}</span>
             </h3>
             <a href={data.blogLink} target='#' style={{margin:"5px 10px"}}>
-              <Button variant='contained' sx={{marginBottom:"90px"}}>Read Full Blog  <hr/></Button>
+              <Button variant='contained' sx={{marginBottom:"90px"}}>Read Full Blog <LaunchIcon/> </Button>
             
             </a>
           </Stack>
