@@ -32,7 +32,7 @@ const Hero = () => {
             delay: 0.7,
           }}
         >
-          <Typography color="#6339f5" fontWeight="600" fontSize="26px" className="fitness-club">
+          <Typography color="#6339f5" fontWeight="700" fontSize="26px" className="fitness-club" fontFamily={"cursive"}>
             Fitness club
           </Typography>
           <Typography
@@ -44,14 +44,17 @@ const Hero = () => {
             mb="23px"
             mt="30px"
             className="Moto"
+            fontFamily={"initial"}
           >
-            Sweat , Smile <br /> and Repeat
+            Sweat, Smile <br /> and Repeat
           </Typography>
           <Typography
-            fontSize="15px"
+            fontSize="14px"
+            fontWeight="550"
             lineHeight="35px"
             mb={4}
             sx={{ color: theme.color }}
+            fontFamily={"monospace"}
           >
             Checkout the most effective Exercises
           </Typography>
@@ -84,12 +87,13 @@ const Hero = () => {
           fontWeight="600"
           color="#6339f5"
           sx={{
-            marginLeft:"10px",
-            marginTop:"75px",
+            marginLeft:"20px",
+            marginTop:"50px",
             display: { lg: "block", xs: "none" },
           }}
           fontSize="180px"
           className="Exercises"
+          fontFamily={"CURSIVE"}
         >
           Exercises
         </Typography>
