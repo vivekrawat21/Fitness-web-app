@@ -147,3 +147,8 @@ body {
     }
   }
   
+  @media screen and (max-width:600px) {
+    .logo-1{
+      width: 100px;
+    }
+  }

@@ -15,97 +15,94 @@ import MaterialUi from "../assets/icons/material-ui-1.svg";
 const Footer = () => {
   return (
     <Box mt="80px" bgcolor="#111827">
-   <Stack direction="row"  justifyContent="space-between">
-      <Stack  mx="40px"  mt =" 14px" direction="column"spacing={{  lg :2 ,xs: 1, sm: 2, md: 4 }} >
-        <Typography  variant="h4" color="white">
+   <Stack direction="row"  justifyContent="space-between" alignItems={"center"} mx={{lg:"40px",xs:"20px"}}>
+      <Stack  alignItems="center" direction="column" spacing={{  lg :2 ,xs: 1, sm: 2, md: 4 }} >
+        <Typography  sx={{ fontWeight:"660", fontSize:{lg:"25px",xs:"16px"},'&:hover':{borderBottom:"2px solid white "}}} color="white">
           Social links
         </Typography>
-      <a href="#" target="#">
+        <div style={{display:"flex"}}>
+      <a href="www.linkedin.com" target="#">
             <Button
               sx={{
                 backgroundColor: "inherit",
-                // color: theme.color,
                 color:"white",
-                width: "5px",
-                // height: "10px",
+                width: {lg:"10px",xs:"3px"},
+                height: {lg:"10px",xs:"3px"},
                 borderRadius: "100px",
-                marginLeft: "5px",
+                marginLeft: {lg:"5px",xs:"3px"},
                 '&:hover': {
-                  // backgroundColor: '',
-                  // color: '#ffffff',
-                  transform: 'translateY(-5px) scale(1.1)',
+               
+                  transform: 'translateY(-5px)',
                 },
               }}
             >
               <LinkedInIcon />
             </Button>
           </a>
-          <a href="#" target="#">
+          <a href="www.twitter.com" target="#">
             <Button
               sx={{
                 backgroundColor: "inherit",
                 color:"white",
-                // color: theme.color,
-                width: "5px",
+                width: {lg:"10px",xs:"3px"},
+                height: {lg:"10px",xs:"3px"},
                 borderRadius: "100px",
-                marginLeft: "5px",
+                marginLeft:{lg:"5px",xs:"3px"},
                 '&:hover': {
-                  // backgroundColor: '',
-                  // color: '#ffffff',
-                  transform: 'translateY(-5px) scale(1.1)',
+                  
+                  transform: 'translateY(-5px) ',
                 },
               }}
             >
               <TwitterIcon />
             </Button>
           </a>
-          <a href="#" target="#">
+          <a href="www.facebook.com" target="#">
             <Button
               sx={{
                 backgroundColor: "inherit",
-                // color: theme.color,
-                
                 color:"white",
-                width: "10px",
-                height: "10px",
+                width: {lg:"10px",xs:"3px"},
+                height: {lg:"10px",xs:"3px"},
                 borderRadius: "100px",
-                marginLeft: "5px",
+              
                 '&:hover': {
-                  // backgroundColor: '',
-                  // color: '#ffffff',
-                  transform: 'translateY(-5px) scale(1.1)',
+                
+                  transform: 'translateY(-5px) ',
                 },
               }}
             >
               <FacebookIcon />
             </Button>
           </a>
+          </div>
       </Stack>
-      <Stack  mt =" 14px" gap="40px" alignItems="center" px="40px" pt="10px">
-        <img src={Logo1} alt="Logo" width="200px" height="40px" />
+      <Stack>
+        <img src={Logo1} alt="Logo" width="200px" height="40px" className="logo-1"/>
         
       </Stack>
-      <Stack direction="column"  mt =" 14px" spacing={{ xs: 1, sm: 2, md: 4 }}>
-      <Typography variant="h4"  color="white">
+      <Stack direction="column"   alignItems="center" marginBottom="10px" spacing={{ xs: 1, sm: 1, md: 2 }}>
+      <Typography  color="white" sx={{ fontSize:{lg:"25px",xs:"16px"},fontWeight:"bold", marginRight:"40px" ,marginTop:"10px",'&:hover':{borderBottom:"2px solid white "}}}>
           Important links
         </Typography>
+      
       <Link to="/"  onClick={() => {
         
               window.scrollTo(0, 0);
-            }} style={{ textDecoration: 'none' , }} 
+            }} style={{ textDecoration: 'none' }} 
             >
            
-        <Typography variant="body1" sx={{  color :"white"}}>Home</Typography>
+        <Typography sx={{  color :"white" ,fontSize:{lg:"17px",xs:"11px"},fontWeight:"520", '&:hover': {
+                  transform: 'translateY(-5px)'
+                }}} >Home</Typography>
           </Link>
-          <Link to="/blogs" onClick={() => {
+          <Link to="/blogs" style={{textDecoration:"none"}} onClick={() => {
         
               window.scrollTo(0, 0);
-            }}style={{ fontSize: 'h6.fontSize' , textDecoration: 'none'}}>
-<Typography variant="body1" sx={{  color :"white" ,  '&:hover': {
-                  // backgroundColor: '',
-                  // color: '#ffffff',
-                  transform: 'translateY(-5px) scale(1.1)',
-                },}}>Blogs</Typography>
+            }}>
+<Typography  sx={{  color :"white" , fontSize:{lg:"17px",xs:"11px"}, fontWeight:"520",'&:hover': {
+                  transform: 'translateY(-5px)',
+                }}}>Blogs</Typography>
           </Link>
       </Stack>
       </Stack>
