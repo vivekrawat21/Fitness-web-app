@@ -1,6 +1,7 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
-import Icon from "../assets/icons/gym.png";
+import Icon from "../assets/icons/treadmill.png";
+import { motion } from "framer-motion";
 
 const BodyPart = ({ item, setBodyPart, bodyPart }) => {
   return (
@@ -24,15 +25,28 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
           window.scrollTo({ top: 1750, left: 100, behavior: "smooth" });
         }}
       >
-        <img
+        <motion.img
           src={Icon}
           alt="dumble"
           className="body-part-icon"
           style={{
-            width: "40px",
-            height: "40px",
+            width: "60px",
+            height: "60px",
           }}
-        ></img>
+          color="white"
+          initial={{
+            opacity: 0,
+            x: 100,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.8,
+            delay: 0.3,
+          }}
+        ></motion.img>
         <Typography
           fontSize="24px"
           fontWeight="bold"

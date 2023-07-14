@@ -33,7 +33,7 @@ const Footer = () => {
             sx={{
               fontWeight: "660",
               fontSize: { lg: "25px", xs: "16px" },
-              "&:hover": { borderBottom: "2px solid white " },
+              "&:hover": { borderBottom: "2px solid white ",color:"#6339f5" },
             }}
             color="white"
             initial={{
@@ -67,7 +67,7 @@ const Footer = () => {
               delay: 0.3,
             }}
           >
-            <a href="www.linkedin.com" target="#">
+            <a href="https://www.linkedin.com/feed/" rel="noreferrer" target="_blank">
               <Button
                 sx={{
                   backgroundColor: "inherit",
@@ -79,10 +79,10 @@ const Footer = () => {
                   },
                 }}
               >
-                <LinkedInIcon />
+                <LinkedInIcon  sx={{'&:hover':{color:"#6339f5"}}}/>
               </Button>
             </a>
-            <a href="www.twitter.com" target="#">
+            <a href="https://twitter.com/home" rel="noreferrer" target="_blank">
               <Button
                 sx={{
                   backgroundColor: "inherit",
@@ -94,10 +94,10 @@ const Footer = () => {
                   },
                 }}
               >
-                <TwitterIcon />
+                <TwitterIcon sx={{'&:hover':{color:"#6339f5"}}}/>
               </Button>
             </a>
-            <a href="www.facebook.com" target="#">
+            <a href="https://www.facebook.com/" rel="noreferrer" target="_blank">
               <Button
                 sx={{
                   backgroundColor: "inherit",
@@ -109,7 +109,7 @@ const Footer = () => {
                   },
                 }}
               >
-                <FacebookIcon />
+                <FacebookIcon sx={{'&:hover':{color:"#6339f5"}}} />
               </Button>
             </a>
           </motion.div>
@@ -149,7 +149,7 @@ const Footer = () => {
               fontWeight: "bold",
               marginRight: "40px",
               marginTop: "10px",
-              "&:hover": { borderBottom: "2px solid white " },
+              "&:hover": { borderBottom: "2px solid white" ,color:"#6339f5" },
             }}
             initial={{
               opacity: 0,
@@ -178,6 +178,7 @@ const Footer = () => {
               fontFamily="monospace"
               component={motion.div}
               sx={{
+                " &:hover":{color:"#6339f5"},
                 color: "white",
                 fontSize: { lg: "15px", xs: "9px" },
                 fontWeight: "bold",
@@ -194,6 +195,7 @@ const Footer = () => {
                 duration: 1,
                 delay: 0.3,
               }}
+             
             >
               Home {<LaunchIcon fontSize="10px" />}
             </Typography>
@@ -212,6 +214,7 @@ const Footer = () => {
                 color: "white",
                 fontSize: { lg: "15px", xs: "9px" },
                 fontWeight: "bold",
+                " &:hover":{color:"#6339f5"},
                 
               }}
               initial={{
