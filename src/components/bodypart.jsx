@@ -30,8 +30,8 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
           alt="dumble"
           className="body-part-icon"
           style={{
-            width: "60px",
-            height: "60px",
+            width: "80px",
+            height: "80px",
           }}
           color="white"
           initial={{
