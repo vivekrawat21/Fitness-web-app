@@ -50,16 +50,16 @@ const Card = () => {
               >
                 {data.blogHeading}
               </h1>
-              <p style={{ margin: "12px" }}>{data.blogDescription}</p>
+              <p style={{ margin: "10px" }}>{data.blogDescription}</p>
             </div>
-            <h3 style={{ margin: "20px", color: theme.color }}>
+            <h3 style={{ margin: "10px 10px", color: theme.color }}>
               Author:{" "}
               <span style={{ color: "red", fontFamily: "monospace" }}>
                 {data.authorName}
               </span>
             </h3>
             <a href={data.blogLink} target="#" style={{ margin: "5px 10px" }}>
-              <Button variant="contained" sx={{ marginBottom: "90px" }}>
+              <Button variant="contained" sx={{ marginBottom: "25px" }}>
                 Read Full Blog <LaunchIcon />{" "}
               </Button>
             </a>
