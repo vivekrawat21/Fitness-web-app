@@ -55,4 +55,4 @@ Contributions to the fitness website project are welcome! If you would like to c
 Thank you for using the fitness website! We hope it helps you on your fitness journey. Stay active and enjoy a healthy lifestyle!
 </br>
 If it is helpful give us a star ⭐
-we will appreciate it.
+we appreciate it.
