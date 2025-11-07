@@ -12,47 +12,58 @@ const Exercisesearch = ({ setExercises, bodyPart, setBodyPart }) => {
 
   const [bodyParts, setBodyParts] = useState([]);
 
-  useEffect(() => {
-    const fetchExerciseData = async () => {
+ 
+useEffect(() => {
+  const fetchExerciseData = async () => {
+    try {
       const bodyPartData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         exerciseOptions
       );
-      console.log(bodyPartData);
 
-      setBodyParts([...bodyPartData]);
-      // checking for update
-    };
-    fetchExerciseData();
-  }, []);
+      console.log("bodyPartData:", bodyPartData);
 
-  const handleSearch = async () => {
-    if (search) {
+      
+      setBodyParts(Array.isArray(bodyPartData) ? bodyPartData : []);
+    } catch (err) {
+      console.error("Failed to fetch body parts:", err);
+      setBodyParts([]);
+    }
+  };
+  fetchExerciseData();
+}, []);
+
+const handleSearch = async () => {
+  if (search) {
+    try {
       const exerciseData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises",
         exerciseOptions
       );
 
-      const searchedExercises = exerciseData.filter((exercise) => {
-        const exerciseTarget = exercise.target
-          ? exercise.target.toLowerCase()
-          : "";
-        const exerciseBodyPart = exercise.bodypart
-          ? exercise.bodypart.toLowerCase()
-          : "";
-        const exerciseName = exercise.name ? exercise.name.toLowerCase() : "";
+      const q = search.toLowerCase().trim();
 
-        return (
-          exerciseName.includes(search) ||
-          exerciseTarget.includes(search) ||
-          exerciseBodyPart.includes(search)
-        );
-      });
+      const searchedExercises = (Array.isArray(exerciseData) ? exerciseData : []).filter(
+        (exercise) => {
+          const exerciseTarget = exercise.target ? exercise.target.toLowerCase() : "";
+          const exerciseBodyPart = exercise.bodyPart ? exercise.bodyPart.toLowerCase() : "";
+          const exerciseName = exercise.name ? exercise.name.toLowerCase() : "";
+
+          return (
+            exerciseName.includes(q) ||
+            exerciseTarget.includes(q) ||
+            exerciseBodyPart.includes(q)
+          );
+        }
+      );
+
       setSearch("");
       setExercises(searchedExercises);
-      // console.log(searchedExercises);
+    } catch (err) {
+      console.error("Failed to fetch exercises:", err);
     }
-  };
+  }
+};
 
   return (
     <>
